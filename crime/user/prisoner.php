@@ -16,7 +16,7 @@ if (empty($_SESSION['usertypeu']))
 
       <div class="wrapper">
 
-            <div class="header"><img src="image/in.png" height="120px" width="900px">
+            <div class="header"><img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -42,10 +42,11 @@ if (empty($_SESSION['usertypeu']))
                   <form action="prisoner.php" method="POST" class="form1">
                   <center>
                        <table class="table2">
+					   
                         <tr>
-                              <td>IDno</td>
+                              <td>PrisonerIDno</td>
                               <td>
-                                    <input type="idno" name="idno" placeholder="IDno...">
+                                    <input type="prisonerIDno" name="prisonerIDno" placeholder="PrisonerIDno...">
                               </td>
                         </tr>
 						 <tr>
@@ -136,20 +137,20 @@ if (empty($_SESSION['usertypeu']))
                   
                   <?php
                   extract($_POST);
-                   if (isset($btn)&&!empty($idno)&&!empty($name)&&!empty($nickname)&&!empty($crimetype)&&!empty($address)&&!empty($age)&&!empty($height)&&!empty($weight)&&!empty($color)&&!empty($time)&&!empty($date)&&!empty($identimark)) 
+                   if (isset($btn)&&!empty($prisonerIDno)&&!empty($name)&&!empty($nickname)&&!empty($crimetype)&&!empty($address)&&!empty($age)&&!empty($height)&&!empty($weight)&&!empty($color)&&!empty($time)&&!empty($date)&&!empty($identimark)) 
                    {
                         require '../connect.php';
                         $date=date('Y.m.d');
-                        $query=mysql_query("INSERT INTO `prisoner` VALUES ('','$idno','$name','$nickname','$crimetype','$address','$age','$height','$weight','$color','time()','$date','$identimark')");
+                        $query=mysql_query("INSERT INTO `prisoner` VALUES ('','$prisonerIDno','$name','$nickname','$crimetype','$address','$age','$height','$weight','$color','time()','$date','$identimark')");
                         if (!empty($query)) {
-                              echo "suspect Successful Added<br>";
+                              echo "prisoner Successful Added<br>";
                         }
                         else  
                         {
                               echo mysql_error();
                         }
                   }
-                  if (isset($btn)&&empty($idno)||empty($name)||empty($nickname)||empty($crimetype)||empty($address)||empty($age)||empty($height)||empty($weight)||empty($color)||empty($time)||empty($date)||empty($identimark)) {
+                  if (isset($btn)&&empty($prisonerIDno)||empty($name)||empty($nickname)||empty($crimetype)||empty($address)||empty($age)||empty($height)||empty($weight)||empty($color)||empty($time)||empty($date)||empty($identimark)) {
                         echo "all figure required";
                   }
                   else

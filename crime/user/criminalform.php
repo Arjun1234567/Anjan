@@ -16,7 +16,7 @@ if (empty($_SESSION['usertypeu']))
 
 	<div class="wrapper">
 
-		<div class="header"><img src="image/in.png" height="120px" width="900px">
+		<div class="header"><img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -37,7 +37,7 @@ if (empty($_SESSION['usertypeu']))
 				</table>
             </div><hr>
             <div class="area1">
-            <center><u>Register Criminal </u></center>
+            <center><u>Criminal Register</u></center>
             	
             	<form action="criminalform.php" method="POST" class="form1" enctype="multipart/form-data">
                   <center>

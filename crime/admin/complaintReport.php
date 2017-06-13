@@ -15,7 +15,7 @@ if (empty($_SESSION['usertypea'])) {
 
       <div class="wrapper">
 
-            <div class="header"> <img src="image/in.png" height="120px" width="900px">
+            <div class="header"> <img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -42,7 +42,7 @@ if (empty($_SESSION['usertypea'])) {
                   
                   <center><table width="40%" class='search'>
                    <tr style='background-color: #999999'>
-                        <th>No</th><th>ID No</th><th>Full Name</th><th>Sex</th><th>Address</th><th>View</th>
+                        <th>No</th><th>CmtID No</th><th> Name</th><th>Sex</th><th>Address</th><th>View</th>
                    </tr>
 
                   <?php
@@ -51,6 +51,7 @@ if (empty($_SESSION['usertypea'])) {
                    $count=0;
                    while($query_run=mysql_fetch_array($query)){
 				   $id=$query_run['id'];   
+				   $cmtIDno=$query_run['cmtIDno'];  
                    $name=$query_run['name'];
                    $sex=$query_run['sex'];
                    $address=$query_run['address'];
@@ -59,7 +60,7 @@ if (empty($_SESSION['usertypea'])) {
                   echo"<tr style='background-color:#CFCFCF'>
                               
                               <td ><center>$count</center></td>
-                              <td ><center>$id</center></td>
+                              <td ><center>$cmtIDno</center></td>
                               <td ><center>$name</center></td>
                               <td ><center>$sex</center></td>
                               <td ><center>$address</center></td>

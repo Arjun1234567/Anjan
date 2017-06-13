@@ -15,7 +15,7 @@ if (empty($_SESSION['usertypea'])) {
 
       <div class="wrapper">
 
-            <div class="header"> <img src="image/in.png" height="120px" width="900px">
+            <div class="header"> <img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -75,7 +75,7 @@ if (empty($_SESSION['usertypea'])) {
                               <td>Id</td>
                                     <td>$idd</td>
                               </tr>
-                              <tr style='background-color:#E7E7E7'>
+                              <tr style='background-color:#CFCFCF'>
                               <td>Full Name</td>
                                     <td>$name</td>
                               </tr>
@@ -83,7 +83,7 @@ if (empty($_SESSION['usertypea'])) {
                               <td>Nickname</td>
                                     <td>$nickname</td>
                               </tr>
-                              <tr style='background-color:#E7E7E7'>
+                              <tr style='background-color:#CFCFCF'>
                               <td>Sex</td>
                                     <td>sex</td>
                               </tr>
@@ -92,7 +92,7 @@ if (empty($_SESSION['usertypea'])) {
                                     <td>$age</td>
                               </tr>
 							  
-							  <tr style='background-color:#CFCFCF'>
+							  <tr style='background-color:#E7E7E7'>
                               <td>Date</td>
                                     <td>$date</td>
                               </tr>
@@ -101,7 +101,7 @@ if (empty($_SESSION['usertypea'])) {
                               <td>Location</td>
                                     <td>$location</td>
                               </tr>
-                              <tr style='background-color:#CFCFCF'>
+                              <tr style='background-color:#E7E7E7'>
                               <td>Description</td>
                                     <td>$description</td>
                               </tr>";

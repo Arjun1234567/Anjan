@@ -15,7 +15,7 @@ if (empty($_SESSION['usertypea'])) {
 
       <div class="wrapper">
 
-            <div class="header"> <img src="image/in.png" height="120px" width="900px">
+            <div class="header"> <img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -42,7 +42,7 @@ if (empty($_SESSION['usertypea'])) {
                   
                   <center><table  width="40%" class='search'>
                    <tr style='background-color: #999999'>
-                   <th>No</th><th>Id</th><th>Full Name</th><th>Sex</th><th>Age</th><th>View</th>
+                   <th>No</th><th>Id</th><th> Name</th><th>Sex</th><th>Age</th><th>View</th>
                    </tr>
                   <?php
                         include '../connect.php';

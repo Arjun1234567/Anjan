@@ -21,7 +21,7 @@ session_start();
 
 		<div class="header">
 
-			<img src="image/in.png" height="120px" width="900px"></div>
+			<img src="image/in.png" height="120px" width="1350px"></div>
 		<div class="content">
 			<center>
 				<form action="index.php" method="POST" class="form1"><br>

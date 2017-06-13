@@ -16,7 +16,7 @@ if (empty($_SESSION['usertypeu']))
 
       <div class="wrapper">
 
-            <div class="header"> <img src="image/in.png" height="120px" width="900px">
+            <div class="header"> <img src="image/in.png" height="120px" width="1350px">
 
 
 

@@ -15,7 +15,7 @@ if (empty($_SESSION['usertypea'])) {
 
       <div class="wrapper">
 
-            <div class="header"> <img src="image/in.png" height="120px" width="900px">
+            <div class="header"> <img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -63,17 +63,17 @@ if (empty($_SESSION['usertypea'])) {
                                          <td>Id</td>
                                          <td>$id</td>
                                     </tr>
-									  <tr style='background-color:#CFCFCF'>
+									  <tr style='background-color:#E7E7E7'>
                                          <td>PrisonerID No</td>
                                          <td>$prisonerIDno</td>
 										 </tr>
 										 
-                                    <tr style='background-color:#E7E7E7'>
+                                    <tr style='background-color:#CFCFCF'>
                                          <td>Full Name</td>
                                          <td>$name</td>
 										 </tr>
 										 
-								    <tr style='background-color:#E7E7E7'>
+								    <tr style='background-color:#CFCFCF'>
                                          <td>Nick Name</td>
                                          <td>$nickname</td>
 										 </tr>
@@ -83,7 +83,7 @@ if (empty($_SESSION['usertypea'])) {
                                          <td>$crimetype</td>
 										 </tr>
 									
-									  <tr style='background-color:#E7E7E7'>
+									  <tr style='background-color:#CFCFCF'>
                                          <td>Address</td>
                                          <td>$address</td>
 										 </tr>
@@ -97,17 +97,17 @@ if (empty($_SESSION['usertypea'])) {
                                           <td>Height</td>
                                           <td>$height</td>
                                    </tr>
-                                   <tr style='background-color:#CFCFCF'>
+                                   <tr style='background-color:#E7E7E7'>
                                            <td>Weight</td>
                                           <td>$weight</td>
                                   </tr>
 								  
-								    <tr style='background-color:#CFCFCF'>
+								    <tr style='background-color:#E7E7E7'>
                                          <td>Time</td>
                                          <td>$time</td>
 										 </tr>
 										 
-								  <tr style='background-color:#CFCFCF'>
+								  <tr style='background-color:#E7E7E7'>
                                          <td>Date</td>
                                          <td>$date</td>
 										 </tr>

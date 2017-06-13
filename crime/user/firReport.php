@@ -17,7 +17,7 @@ if (empty($_SESSION['usertypeu']))
 
 	<div class="wrapper">
 
-		<div class="header"><img src="image/in.png" height="120px" width="900px">
+		<div class="header"><img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -38,7 +38,7 @@ if (empty($_SESSION['usertypeu']))
 				</table>
             </div><hr>
             <div class="area1">
-            <center><u>Add First Information Report (FIR)</u></center><br>
+            <center><u>Add First Information Report</u></center><br>
             	
             	<form action="firReport.php" method="POST" class="form1">
                   <center>
@@ -50,21 +50,39 @@ if (empty($_SESSION['usertypeu']))
                               </td>
                         </tr>
                         <tr>
-                              <td>Informal Address</td>
+                              <td>CmtID no</td>
                               <td>
-                                    <input type="text" name="address" placeholder="Informal Address...">
+                                    <input type="text" name="cmtIDno" placeholder="CmtID no...">
                               </td>
                         </tr>
                         <tr>
+                              <td>Date</td>
+                              <td>
+                                    <input type="text" name="date" placeholder="Date...">
+                              </td>
+                        </tr>
+						 <tr>
+                              <td>Time</td>
+                              <td>
+                                    <input type="text" name="time" placeholder="Time...">
+                              </td>
+                        </tr>
+						 <tr>
+                              <td>Address</td>
+                              <td>
+                                    <input type="text" name="address" placeholder="Address...">
+                              </td>
+                        </tr>
+						 <tr>
                               <td>District</td>
                               <td>
                                     <input type="text" name="district" placeholder="District...">
                               </td>
                         </tr>
                         <tr>
-                              <td>Foreign/Local</td>
+                              <td>Choose</td>
                               <td>
-                                    <select name="choose" placeholder="Foreign/Local...">
+                                    <select name="choose" placeholder="Choose...">
                                           <option></option>
                                           <option value="Foreign">Foreign</option>
                                           <option value="Local">Local</option>
@@ -72,22 +90,40 @@ if (empty($_SESSION['usertypeu']))
                               </td>
                         </tr>
                         <tr>
-                              <td>Place of Occurance</td>
+                              <td>Place</td>
                               <td>
-                                    <input type="text" name="place" placeholder="Place of Occurance...">
+                                    <input type="text" name="place" placeholder="Place...">
                               </td>
                         </tr>
                         <tr>
                               <td>Info Type</td>
                               <td>
-                                    <input type="text" name="infotype" placeholder="Info type ...">
+                                    <input type="text" name="infotype" placeholder="Info type...">
+                              </td>
+                        </tr>
+						<tr>
+                              <td>Info</td>
+                              <td>
+                                    <input type="text" name="info" placeholder="Info...">
+                              </td>
+                        </tr>
+						<tr>
+                              <td>Passportno</td>
+                              <td>
+                                    <input type="text" name="passportno" placeholder="Passportno...">
+                              </td>
+                        </tr>
+						<tr>
+                              <td>Policename</td>
+                              <td>
+                                    <input type="text" name="policename" placeholder="Policename...">
                               </td>
                         </tr>
                         
                         <tr>
-                              <td>Infomation Received</td>
+                              <td>Recived Time</td>
                               <td>
-                                    <textarea class="textarea2" placeholder="Add information here..." name="info"></textarea>
+                                    <textarea class="textarea2" placeholder="Recived time information..." name="recivedtime"></textarea>
                                     
                               </td>
                         </tr>
@@ -103,7 +139,7 @@ if (empty($_SESSION['usertypeu']))
             	if (isset($btn)) {
             		require '../connect.php';
             		$date=date('Y.m.d');
-            		$query=mysql_query("INSERT INTO `fir` VALUES ('','$firno','$date','$address','$district','$choose','$place','$infotype','$info')");
+            		$query=mysql_query("INSERT INTO `fir` VALUES ('','$firno','cmtIDno','$date','$time','$address','$district','$choose','$place','$infotype','$info','$passportno','$policename','$recivedtime')");
             		if (!empty($query)) 
                         {
             			echo "FIR Succesiful Added<br>";
@@ -113,7 +149,7 @@ if (empty($_SESSION['usertypeu']))
             			echo mysql_error();
             		}
             	}
-                   elseif (isset($btn)&&empty($firno)||empty($date)||empty($address)||empty($district)||empty($choose)||empty($place)||empty($infotype)||empty($info))
+                   elseif (isset($btn)&&empty($firno)||empty($date)||empty($time)||empty($address)||empty($district)||empty($choose)||empty($place)||empty($infotype)||empty($info)||empty($passportno)||empty($policename)||empty($recivedtime))
                    {
                        echo "all figure required";
                   }

@@ -16,7 +16,7 @@ if (empty($_SESSION['usertypeu']))
 
 	<div class="wrapper">
 
-		<div class="header"><img src="image/in.png" height="120px" width="900px">
+		<div class="header"><img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -42,57 +42,87 @@ if (empty($_SESSION['usertypeu']))
             		<form action="index.php" method="POST" class="form1">
             	<center><table class="table1">
             		<tr>
-            			<td>ID No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            			<input type="text" name="IDno" class="input" placeholder="ID..." >
+            			<td>CmtID no</td>
+            			<td><input type="text" name="cmtIDno" class="input" placeholder="CmtIDno..." >
                         </td>
-                        
-            			<td>Full Name&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="name" class="input" placeholder="Full Name..." >
+						</tr>
+						
+                        <tr>
+            			<td>Full Name</td>
+                         <td> <input type="text" name="name" class="input" placeholder="Full Name..." >
+						  </td>
             		</tr>
+					
             		<tr>
-            			<td>Sex     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <select name="sex">
+            			<td>Sex</td>   
+                                   <td> <select name="sex">
                                           <option></option>
                                           <option>Male</option>
                                           <option>Female</option>
 
                                     </select>
                                     
-			  </td>
-            			<td>Address  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="adress" class="input" placeholder="Address..." >
-                                    &nbsp;&nbsp;&nbsp;
-			  </td>
+			                 </td>
+			          </tr>
+			  
+            			<td>Address</td>
+                         <td> <input type="text" name="address" class="input" placeholder="Address..." >
+                                    
+			      </td>
             		</tr>
+					
             		<tr>
-            			<td>Phone No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   <input type="text" name="phone" class="input" placeholder="Phone Number...">
+            			<td>Phone No</td>
+                                  <td> <input type="text" name="phone" class="input" placeholder="Phone Number...">
 			            </td>
-            			<td>Occupation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   <input type="text" name="occupation" class="input" placeholder="Occupation...">
+						</tr>
+						
+						<tr>
+            			<td>Occupation</td>
+                                  <td> <input type="text" name="occupation" class="input" placeholder="Occupation...">
                               </td>
+							  </tr>
+							
+						<tr>
+            			<td>Time</td>
+                                  <td> <input type="text" name="time" class="input" placeholder="Time...">
+                              </td>
+							  </tr>
+							  
+						<tr>
+            			<td>Date</td>
+                                  <td> <input type="text" name="date" class="input" placeholder="Date...">
+                              </td>
+							  </tr>
+							
+						<tr>
+            			<td>Complain</td>
+                                <td>  <textarea class="textarea3" name="complain" placeholder="Complain..."></textarea>
+                              </td>
+							  </tr>  
+							 
+						<tr>
+            			<td>Nationality</td>
+                                  <td> <input type="text" name="nationality" class="input" placeholder="Nationality...">
+                              </td>
+							  </tr> 
             		
             	</table>
-            </center>
-                         <br>
-
-			  <center>Complain<br><textarea class="textarea1" placeholder="Add Coplain..." name="complain"></textarea></center> 
-			<center>
-			<br>
+            
+                   
 			<input type="submit" name="btn" class="btn" value="Add"></center>
+			</center>
             	</form>
             	
             	
             	<?php
 
             	extract($_POST);
-            	if (isset($btn)&&!empty($IDno)&&!empty($name)&&!empty($sex)&&!empty($adress)&&!empty($phone)&&!empty($occupation)&&!empty($complain))
+            	if (isset($btn)&&!empty($cmtIDno)&&!empty($name)&&!empty($sex)&&!empty($address)&&!empty($phone)&&!empty($occupation)&&!empty($time)&&!empty($date)&&!empty($complain)&&!empty($nationality))
                    {
             		require '../connect.php';
             		$date=date('Y.m.d');
-            		$query=mysql_query("INSERT INTO `complain` VALUES ('','$IDno','$name','$sex','$adress','$phone','$occupation','time()','$date','$complain')");
+            		$query=mysql_query("INSERT INTO `complain` VALUES ('','$cmtIDno','$name','$sex','$address','$phone','$occupation','time()','$date','complain','$nationality')");
             		if (!empty($query)) {
             			echo "Complain is Succesiful Added<br>";
             		}
@@ -101,7 +131,7 @@ if (empty($_SESSION['usertypeu']))
             			echo mysql_error();
             		}
             	}
-                  elseif (isset($btn)&&empty($IDno)||empty($name)||empty($sex)||empty($adress)||empty($phone)||empty($occupation)||empty($complain))
+                  elseif (isset($btn)&&!empty($cmtIDno)&&!empty($name)&&!empty($sex)&&!empty($address)&&!empty($phone)&&!empty($occupation)&&!empty($time)&&!empty($date)&&!empty($complain)&&!empty($nationality))
                         {
                               echo "all figure required";
                         }

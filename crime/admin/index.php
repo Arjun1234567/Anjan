@@ -18,7 +18,7 @@ if (empty($_SESSION['usertypea'])) {
 		<div class="header">
 
 
-            <img src="image/in.png" height="120px" width="900px">
+            <img src="image/in.png" height="120px" width="1350px">
 
 
 

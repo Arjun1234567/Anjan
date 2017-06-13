@@ -15,7 +15,7 @@ if (empty($_SESSION['usertypea'])) {
 
       <div class="wrapper">
 
-            <div class="header"> <img src="image/in.png" height="120px" width="900px">
+            <div class="header"> <img src="image/in.png" height="120px" width="1350px">
 
 
 
@@ -42,7 +42,7 @@ if (empty($_SESSION['usertypea'])) {
                   
                   <center><table  width="40%" class='search'>
                    <tr style='background-color: #999999'>
-                   <th>No</th><th>FIRNo</th><th>Informal Address</th><th>District</th><th>View</th>
+                   <th>No</th><th>FIRNo</th><th>Address</th><th>Choose</th><th>District</th><th>View</th>
                    </tr>
 
                   <?php
@@ -53,7 +53,9 @@ if (empty($_SESSION['usertypea'])) {
 				   $id=$query_run['id']; 
                    $firno=$query_run['firno'];
                    $address=$query_run['address'];
+				   $choose=$query_run['choose'];
                    $district=$query_run['district'];
+				   
                    $count++;
 
                   echo"<tr style='background-color:#CFCFCF'>
@@ -61,6 +63,7 @@ if (empty($_SESSION['usertypea'])) {
                                                       <td><center>$count</center></td>
                                                       <td><center>$firno</center></td>
                                                       <td><center>$address</center></td>
+													  <td><center>$choose</center></td>
                                                       <td><center>$district</center></td>
                                                       <td><center><form action='viewfirReport.php?id=$firno' method='POST'><button class='input' value='$id'>View</button></form></center></td>
                                 
